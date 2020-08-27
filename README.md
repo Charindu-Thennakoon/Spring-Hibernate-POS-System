@@ -23,3 +23,6 @@ Please make sure to update tests as appropriate will be appreciate.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
+##Images
+![alt text](https://github.com/Charindu-Thennakoon/Spring-Hibernate-POS-System/blob/master/extraImages/1.png)
