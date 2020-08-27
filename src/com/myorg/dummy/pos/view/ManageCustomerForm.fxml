@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="1000.0" style="-fx-background-color: white;" stylesheets="@style/managecustomerform.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.myorg.dummy.pos.controller.ManageCustomerFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1000.0">
+         <fill>
+            <LinearGradient endX="0.04807692307692308" endY="0.7115384615384616">
+               <stops>
+                  <Stop color="#d6a900" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <ImageView id="imgHome" fitHeight="53.0" fitWidth="55.0" layoutX="22.0" layoutY="16.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/home-icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="365.0" layoutY="27.0" text="Manage Customers">
+         <font>
+            <Font name="Lucida Sans Demibold" size="27.0" />
+         </font>
+      </Label>
+      <JFXButton id="btnAddNewCustomer" layoutX="765.0" layoutY="86.0" onAction="#btnAddNew_OnAction" prefHeight="46.0" prefWidth="166.0" style="-fx-cursor: hand;" text="+ New Customer" />
+      <JFXTextField fx:id="txtCustomerId" labelFloat="true" layoutX="17.0" layoutY="118.0" prefHeight="28.0" prefWidth="615.0" promptText="Customer ID :" />
+      <JFXTextField fx:id="txtCustomerName" labelFloat="true" layoutX="17.0" layoutY="164.0" prefHeight="28.0" prefWidth="615.0" promptText="Customer Name :" />
+      <JFXTextField fx:id="txtCustomerAddress" labelFloat="true" layoutX="17.0" layoutY="212.0" prefHeight="28.0" prefWidth="615.0" promptText="Customer Address :" />
+      <JFXButton id="btnSave" fx:id="btnSave" layoutX="758.0" layoutY="164.0" onAction="#btnSave_OnAction" prefHeight="28.0" prefWidth="74.0" style="-fx-cursor: hand;" text="Save" />
+      <JFXButton id="btnDelete" fx:id="btnDelete" layoutX="871.0" layoutY="164.0" onAction="#btnDelete_OnAction" prefHeight="28.0" prefWidth="74.0" style="-fx-cursor: hand;" text="Delete" />
+      <TableView fx:id="tblCustomers" layoutX="45.0" layoutY="277.0" prefHeight="285.0" prefWidth="920.0">
+        <columns>
+          <TableColumn prefWidth="214.0" text="Customer ID" />
+          <TableColumn prefWidth="277.0" text="Customer Name" />
+            <TableColumn prefWidth="118.0" text="Customer Address" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
